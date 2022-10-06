@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--Pale-blue);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.card-container {
+  width: 75%;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding-bottom: 1.25rem;
+}
+
+.card-container .hero {
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+}
+
+.card-container h2 {
+  margin: 0.625rem 0;
+  color: var(--Dark-blue);
+}
+
+.card-container p {
+  margin: 0 1rem 0.625rem 1rem;
+  color: var(--Desaturated-blue);
+}
+
+.card-container .price {
+  background-color: var(--Very-pale-blue);
+  margin: 1.25rem auto;
+  width: 90%;
+  padding: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price img {
+  margin-right: 0.625rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  font-weight: bold;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-neutral {
+  background-color: transparent;
+  color: var(--Bright-blue);
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: var(--Bright-blue);
+  color: #fff;
+  margin-bottom: 0.625rem;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--Desaturated-blue);
+}
+
+.btn-neutral:hover,
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-secondary:hover {
+  color: var(--Dark-blue);
+}
+
+.body-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("./order-summary-component-main/images/pattern-background-mobile.svg")
+    no-repeat center center/cover;
+  z-index: -1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 640px) {
+  .card-container {
+    max-width: 375px;
+  }
+
+  .body-background {
+    background: url("./order-summary-component-main/images/pattern-background-desktop.svg")
+      no-repeat center center/cover;
+    height: 50vh;
+  }
+}
