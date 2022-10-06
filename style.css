@@ -48,7 +48,7 @@ body {
   width: 100%;
 }
 
-.card-container h2 {
+.card-container h1 {
   margin: 0.625rem 0;
   color: var(--Dark-blue);
 }
